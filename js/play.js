@@ -7,6 +7,14 @@ export default function playNow() {
   d.addEventListener('click', (e) => {
     if (e.target.matches('.click')) {
       establecerSonido(e.target.dataset.click);
+      let random = Math.floor(Math.random() * (3 - 1) + 1).toString();
+      setTimeout(() => {
+        includeHtml('.container-btn', 'assets/win_OR_loser.html');
+      }, 500);
+      setTimeout(() => {
+        establecerPlayer('.user', e.target.dataset.click);
+        establecerPlayer('.rival', random);
+      }, 800);
     }
   });
 }
@@ -19,15 +27,10 @@ function establecerSonido(value) {
   eligirSonido(options[value]);
 }
 function eligirSonido(src) {
-  const audio = d.querySelector('audio');
+  const audio = d.createElement('audio');
   audio.src = src;
   audio.currentTime = 0;
-  let playPromise = audio.play();
-  playPromise
-    .then((result) => {})
-    .catch((error) => {
-      console.log(error);
-    });
+  audio.play();
   setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
