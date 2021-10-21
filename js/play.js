@@ -9,12 +9,12 @@ export default function playNow() {
       establecerSonido(e.target.dataset.click);
       setTimeout(() => {
         includeHtml('.container-btn', 'assets/win_OR_loser.html');
-      }, 1000);
+      }, 900);
       let random = Math.floor(Math.random() * (3 - 1) + 1).toString();
       setTimeout(() => {
         establecerPlayer('.user', e.target.dataset.click);
         establecerPlayer('.rival', random);
-      }, 1095);
+      }, 1200);
     }
   });
 }
