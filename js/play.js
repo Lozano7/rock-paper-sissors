@@ -33,7 +33,7 @@ function eligirSonido(src) {
   setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
-  }, 1000);
+  }, 500);
 }
 function establecerPlayer(className, value) {
   const $player = d.querySelector(className);
