@@ -14,7 +14,7 @@ export default function playNow() {
       setTimeout(() => {
         establecerPlayer('.user', e.target.dataset.click);
         establecerPlayer('.rival', random);
-      }, 600);
+      }, 900);
     }
   });
 }
@@ -55,6 +55,11 @@ function establecerPlayer(className, value) {
   }
 }
 
+let count = 0;
 function ganador(user, pc) {
-  let count = 0;
+  let userNumber = parseInt(user);
+  let pcNumber = parseInt(pc);
+  switch (userNumber) {
+    case 1:
+  }
 }
