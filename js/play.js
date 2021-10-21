@@ -41,16 +41,16 @@ function establecerPlayer(className, value) {
   switch (value) {
     case '1':
       $player.style.backgroundColor = 'hsl(230, 89%, 62%)';
-      $player.querySelector('button img').src = '../images/icon-paper.svg';
+      $player.querySelector('button img').src = 'images/icon-paper.svg';
       break;
     case '2':
       $player.style.backgroundColor = 'hsl(39, 89%, 49%)';
-      $player.querySelector('button img').src = '../images/icon-scissors.svg';
+      $player.querySelector('button img').src = 'images/icon-scissors.svg';
       break;
 
     case '3':
       $player.style.backgroundColor = 'hsl(349, 71%, 52%)';
-      $player.querySelector('button img').src = '../images/icon-rock.svg';
+      $player.querySelector('button img').src = 'images/icon-rock.svg';
       break;
   }
 }
