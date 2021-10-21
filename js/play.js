@@ -19,7 +19,7 @@ function establecerSonido(value) {
   eligirSonido(options[value]);
 }
 function eligirSonido(src) {
-  const audio = d.createElement('audio');
+  const audio = d.querySelector('audio');
   audio.src = src;
   audio.currentTime = 0;
   audio.play();

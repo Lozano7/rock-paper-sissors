@@ -253,6 +253,10 @@ main {
   background-color: var(--Rock-Gradient);
   bottom: -30%;
 }
+main audio {
+  visibility: hidden;
+  opacity: 0;
+}
 
 /*winORlose*/
 .container-result {
