@@ -14,7 +14,7 @@ export default function playNow() {
       setTimeout(() => {
         establecerPlayer('.user', e.target.dataset.click);
         establecerPlayer('.rival', random);
-      }, 1200);
+      }, 1500);
     }
   });
 }
