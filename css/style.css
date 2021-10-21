@@ -190,7 +190,7 @@ img {
   visibility: visible;
 }
 .active-body {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 /*Main*/
 main {
