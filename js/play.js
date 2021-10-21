@@ -7,7 +7,6 @@ export default function playNow() {
   d.addEventListener('click', (e) => {
     if (e.target.matches('.click')) {
       establecerSonido(e.target.dataset.click);
-      includeHtml('.container-btn', 'assets/win_OR_loser.html');
     }
   });
 }
@@ -27,7 +26,7 @@ function eligirSonido(src) {
   setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
-  }, 500);
+  }, 900);
 }
 function establecerPlayer(className, value) {
   const $player = d.querySelector(className);
