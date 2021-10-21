@@ -105,7 +105,7 @@ body {
   position: absolute;
   bottom: 1vh;
 }
-.container-btn {
+.container-btn-cerrar {
   height: 70px;
   display: flex;
   justify-content: center;
@@ -193,8 +193,53 @@ main {
   align-items: center;
   justify-content: center;
 }
-main img {
+.container-btn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.container-btn img {
   width: 65%;
   height: auto;
   object-fit: cover;
+}
+.btn {
+  position: absolute;
+  width: 40%;
+  height: 75%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn button {
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  border-top: 5px solid #999;
+}
+.btn button img {
+  width: 50%;
+  height: auto;
+}
+.papel {
+  background-color: var(--Paper-Gradient);
+  left: 0;
+  top: -50%;
+}
+.tijeras {
+  background-color: var(--Scissors-Gradient);
+  right: 0;
+  top: -50%;
+}
+.piedra {
+  background-color: var(--Rock-Gradient);
+  bottom: -30%;
 }
