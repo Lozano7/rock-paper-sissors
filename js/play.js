@@ -13,29 +13,21 @@ export default function playNow() {
 }
 function establecerSonido(value) {
   const options = {
-    1: '../assets/sounds/papel.webm',
-    2: '../assets/sounds/tijera.webm',
-    3: '../assets/sounds/piedra.webm',
+    1: '../assets/sounds/papel.wav',
+    2: '../assets/sounds/tijera.wav',
+    3: '../assets/sounds/piedra.wav',
   };
   eligirSonido(options[value]);
 }
-async function eligirSonido(src) {
-  let sonido = new Promise((resolve, reject) => {
-    try {
-      const audio = d.createElement('audio');
-      audio.src = src;
-      audio.play();
-      setTimeout(() => {
-        audio.pause();
-        audio.currentTime = 0;
-      }, 500);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  await sonido.then().catch((error) => {
-    console.log(error);
-  });
+function eligirSonido(src) {
+  const audio = d.createElement('audio');
+  audio.src = src;
+  audio.currentTime = 0;
+  audio.play();
+  setTimeout(() => {
+    audio.pause();
+    audio.currentTime = 0;
+  }, 500);
 }
 function establecerPlayer(className, value) {
   const $player = d.querySelector(className);
