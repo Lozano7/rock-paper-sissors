@@ -24,14 +24,23 @@ function establecerSonido(value) {
   };
   eligirSonido(options[value]);
 }
-function eligirSonido(src) {
-  const audio = d.createElement('audio');
-  audio.src = src;
-  audio.play();
-  setTimeout(() => {
-    audio.pause();
-    audio.currentTime = 0;
-  }, 500);
+async function eligirSonido(src) {
+  let sonido = new Promise((resolve, reject) => {
+    try {
+      const audio = d.createElement('audio');
+      audio.src = src;
+      audio.play();
+      setTimeout(() => {
+        audio.pause();
+        audio.currentTime = 0;
+      }, 500);
+    } catch (error) {
+      console.log(error);
+    }
+  });
+  await sonido.then().catch((error) => {
+    console.log(error);
+  });
 }
 function establecerPlayer(className, value) {
   const $player = d.querySelector(className);
