@@ -22,7 +22,12 @@ function eligirSonido(src) {
   const audio = d.querySelector('audio');
   audio.src = src;
   audio.currentTime = 0;
-  audio.play();
+  let playPromise = audio.play();
+  playPromise
+    .then((result) => {})
+    .catch((error) => {
+      console.log(error);
+    });
   setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
