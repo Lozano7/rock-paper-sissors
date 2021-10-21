@@ -12,15 +12,15 @@ export default function playNow() {
       setTimeout(() => {
         establecerPlayer('.user', e.target.dataset.click);
         establecerPlayer('.rival', random);
-      }, 1200);
+      }, 800);
     }
   });
 }
 function establecerSonido(value) {
   const options = {
-    1: '../assets/sounds/sonido-papel.mp3',
-    2: '../assets/sounds/sonido-tijera.mp3',
-    3: '../assets/sounds/sonido-piedra.mp3',
+    1: '../assets/sounds/papel.mp3',
+    2: '../assets/sounds/tijera.mp3',
+    3: '../assets/sounds/piedra.mp3',
   };
   eligirSonido(options[value]);
 }
