@@ -12,9 +12,9 @@ export default function playNow() {
 }
 function establecerSonido(value) {
   const options = {
-    1: '../assets/sounds/papel.wav',
-    2: '../assets/sounds/tijera.wav',
-    3: '../assets/sounds/piedra.wav',
+    1: 'assets/sounds/papel.wav',
+    2: 'assets/sounds/tijera.wav',
+    3: 'assets/sounds/piedra.wav',
   };
   eligirSonido(options[value]);
 }
