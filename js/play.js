@@ -7,14 +7,12 @@ export default function playNow() {
   d.addEventListener('click', (e) => {
     if (e.target.matches('.click')) {
       establecerSonido(e.target.dataset.click);
-      setTimeout(() => {
-        includeHtml('.container-btn', 'assets/win_OR_loser.html');
-      }, 900);
+      includeHtml('.container-btn', 'assets/win_OR_loser.html');
       let random = Math.floor(Math.random() * (3 - 1) + 1).toString();
       setTimeout(() => {
         establecerPlayer('.user', e.target.dataset.click);
         establecerPlayer('.rival', random);
-      }, 2500);
+      }, 1200);
     }
   });
 }
