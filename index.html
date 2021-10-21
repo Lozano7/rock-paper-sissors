@@ -23,7 +23,19 @@
   </head>
   <body>
     <div class="play">
-      <div class="header" data-include></div>
+      <section class="score">
+        <div class="container-score">
+          <div class="text">
+            <p>Piedra</p>
+            <p>Papel</p>
+            <p>Tijeras</p>
+          </div>
+          <div class="score-value">
+            <p class="score_title">Score</p>
+            <div class="value"><p id="score"></p></div>
+          </div>
+        </div>
+      </section>
       <main>
         <div class="container-btn" data-include>
           <img src="images/bg-triangle.svg" alt="" />
@@ -59,7 +71,21 @@
           </div>
         </div>
       </main>
-      <div class="footer" data-include></div>
+      <div class="results">
+        <h2></h2>
+        <button id="regresar">PLAY AGAIN</button>
+      </div>
+      <footer class="footer">
+        <div class="container-btn-cerrar">
+          <button id="btn-rules">Rules</button>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Anthony Lozano</a>.
+        </div>
+      </footer>
     </div>
     <aside class="rules">
       <h2>Rules</h2>
