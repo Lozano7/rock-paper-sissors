@@ -12,14 +12,14 @@ export default function playNow() {
       let random = Math.floor(Math.random() * (4 - 1) + 1).toString();
       setTimeout(() => {
         includeHtml('.container-btn', 'assets/win_OR_loser.html');
-      }, 500);
+      }, 900);
       setTimeout(() => {
         establecerPlayer('.user', e.target.dataset.click);
         establecerPlayer('.rival', random);
-      }, 900);
+      }, 1900);
       setTimeout(() => {
         ganador(e.target.dataset.click, random);
-      }, 1200);
+      }, 2500);
     }
   });
 }
@@ -34,12 +34,12 @@ function establecerSonido(value) {
 function eligirSonido(src, time) {
   const audio = d.createElement('audio');
   audio.src = src;
-  audio.currentTime = 0;
+  audio.currentTime = 0.5;
   audio.play();
   setTimeout(() => {
     audio.pause();
     audio.currentTime = 0;
-  }, time || 900);
+  }, time || 500);
 }
 function establecerPlayer(className, value) {
   const $player = d.querySelector(className);
@@ -68,17 +68,13 @@ const $btn = $results.querySelector('#regresar');
 const resultados = {
   1: function () {
     $results.style.display = 'flex';
-    $results.classList.add('active');
     $title.innerHTML = 'DRAW';
-    $btn.classList.add('active');
     $main.style.marginBottom = '0';
     eligirSonido('assets/sounds/empate.mp3', 8000);
   },
   2: function () {
     $results.style.display = 'flex';
-    $results.classList.add('active');
     $title.innerHTML = 'YOU WIN';
-    $btn.classList.add('active');
     $main.style.marginBottom = '0';
     ++count;
     console.log(count);
@@ -88,9 +84,7 @@ const resultados = {
   },
   3: function () {
     $results.style.display = 'flex';
-    $results.classList.add('active');
     $title.innerHTML = 'YOU LOSE';
-    $btn.classList.add('active');
     $main.style.marginBottom = '0';
     --count;
     if (count < 0) count = 0;
