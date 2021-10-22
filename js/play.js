@@ -2,7 +2,7 @@ import includeHtml from './include_html.js';
 
 const d = document;
 const ls = localStorage;
-let count = parseInt(ls.getItem('contador'));
+let count = ls.getItem('contador');
 const $score = d.getElementById('score');
 
 export default function playNow() {
@@ -64,7 +64,6 @@ function establecerPlayer(className, value) {
 const $main = d.querySelector('main');
 const $results = d.querySelector('.results');
 const $title = $results.querySelector('h2');
-const $btn = $results.querySelector('#regresar');
 
 const resultados = {
   1: function () {
@@ -77,7 +76,7 @@ const resultados = {
     $results.style.display = 'flex';
     $title.innerHTML = 'GANASTE';
     $main.style.marginBottom = '0';
-    ++count;
+    count++;
     console.log(count);
     ls.setItem('contador', count.toString());
     $score.innerHTML = count.toString();
@@ -87,7 +86,8 @@ const resultados = {
     $results.style.display = 'flex';
     $title.innerHTML = 'PERDISTE';
     $main.style.marginBottom = '0';
-    --count;
+    count++;
+    console.log(count);
     if (count < 0) count = 0;
     ls.setItem('contador', count.toString());
     $score.innerHTML = count.toString();
