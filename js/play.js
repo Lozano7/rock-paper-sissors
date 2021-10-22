@@ -86,7 +86,7 @@ const resultados = {
     $results.style.display = 'flex';
     $title.innerHTML = 'PERDISTE';
     $main.style.marginBottom = '0';
-    count++;
+    count--;
     console.log(count);
     if (count < 0) count = 0;
     ls.setItem('contador', count.toString());
