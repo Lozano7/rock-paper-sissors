@@ -11,6 +11,7 @@ export default function playNow() {
       establecerSonido(e.target.dataset.click);
       let random = Math.floor(Math.random() * (4 - 1) + 1).toString();
       setTimeout(() => {
+        d.querySelector('.play').removeChild(d.querySelector('h1'));
         includeHtml('.container-btn', 'assets/win_OR_loser.html');
       }, 900);
       setTimeout(() => {
@@ -68,13 +69,13 @@ const $btn = $results.querySelector('#regresar');
 const resultados = {
   1: function () {
     $results.style.display = 'flex';
-    $title.innerHTML = 'DRAW';
+    $title.innerHTML = 'EMPATE';
     $main.style.marginBottom = '0';
     eligirSonido('assets/sounds/empate.mp3', 8000);
   },
   2: function () {
     $results.style.display = 'flex';
-    $title.innerHTML = 'YOU WIN';
+    $title.innerHTML = 'GANASTE';
     $main.style.marginBottom = '0';
     ++count;
     console.log(count);
@@ -84,7 +85,7 @@ const resultados = {
   },
   3: function () {
     $results.style.display = 'flex';
-    $title.innerHTML = 'YOU LOSE';
+    $title.innerHTML = 'PERDISTE';
     $main.style.marginBottom = '0';
     --count;
     if (count < 0) count = 0;
