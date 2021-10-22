@@ -1,8 +1,8 @@
 import includeHtml from './include_html.js';
 
 const d = document;
-const ls = lo;
-let count = 0;
+const ls = localStorage;
+let count = parseInt(ls.getItem('contador'));
 const $score = d.getElementById('score');
 
 export default function playNow() {
@@ -72,7 +72,7 @@ const resultados = {
     $title.innerHTML = 'DRAW';
     $btn.classList.add('active');
     $main.style.marginBottom = '0';
-    eligirSonido('assets/sounds/win.wav', 3000);
+    eligirSonido('assets/sounds/empate.mp3', 8000);
   },
   2: function () {
     $results.style.display = 'flex';
@@ -84,7 +84,7 @@ const resultados = {
     console.log(count);
     ls.setItem('contador', count.toString());
     $score.innerHTML = count.toString();
-    eligirSonido('assets/sounds/win.wav', 3000);
+    eligirSonido('assets/sounds/ganador.mp3', 8000);
   },
   3: function () {
     $results.style.display = 'flex';
@@ -96,7 +96,7 @@ const resultados = {
     if (count < 0) count = 0;
     ls.setItem('contador', count.toString());
     $score.innerHTML = count.toString();
-    eligirSonido('assets/sounds/loser.wav', 3000);
+    eligirSonido('assets/sounds/perdedor.mp3', 8000);
   },
 };
 
