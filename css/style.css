@@ -2,6 +2,7 @@ html {
   font-size: 10px;
   box-sizing: border-box;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  overflow-x: hidden;
 }
 :root {
   /*Primary*/
@@ -58,7 +59,7 @@ body {
   flex-direction: column;
 }
 .play h1 {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 /*header*/
@@ -360,7 +361,10 @@ main {
   .play main {
     margin: 0;
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
+  }
+  .play h1 {
+    margin-bottom: 120px;
   }
   .container-score p {
     font-size: 1.2em;
@@ -399,10 +403,11 @@ main {
   }
   .footer {
     font-size: 1.5em;
+    bottom: 2vh;
   }
   .footer .container-btn-cerrar {
     position: absolute;
-    right: 0;
+    right: 1.5vw;
     bottom: 8vh;
     height: auto;
     z-index: 3;
